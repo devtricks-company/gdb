@@ -8,7 +8,7 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   const port = configService.get<number>('port') || 5600;
   const host = configService.get<string>('host') || 'localhost';
-  await app.listen(port,host);
-  console.log(`Application is running on: ${host} ${port}`)
+  await app.listen(port, host);
+  console.log(`Application is running on: ${host} ${port}`);
 }
 bootstrap();
